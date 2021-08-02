@@ -1,0 +1,121 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.Oracle10gDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            oracle.jdbc.OracleDriver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">
+            jdbc:oracle:thin:@//192.168.0.27:1521/orcl1
+        </property>
+
+        <property name = "hibernate.connection.username">
+            SMPSYS
+        </property>
+
+        <property name = "hibernate.connection.password">
+            smpsysgsit2007
+        </property>
+        <!-- List of XML mapping files -->
+        <mapping class="com.greenstar.entity.GSMBirthday" />
+        <mapping class="com.greenstar.entity.GSSStaff" />
+        <mapping class="com.greenstar.entity.GSSWorkWith" />
+        <mapping class="com.greenstar.entity.LeaveEntry" />
+        <mapping class="com.greenstar.entity.Order" />
+        <mapping class="com.greenstar.entity.ProductOrder" />
+        <mapping class="com.greenstar.entity.SDCustomer" />
+        <mapping class="com.greenstar.entity.SDDepot" />
+        <mapping class="com.greenstar.entity.SDDepotStaff" />
+        <mapping class="com.greenstar.entity.SDSKUGroup" />
+        <mapping class="com.greenstar.entity.SDStaff" />
+        <mapping class="com.greenstar.entity.SDStatus" />
+        <mapping class="com.greenstar.entity.SDTown" />
+        <mapping class="com.greenstar.entity.SDTownCustomer" />
+        <mapping class="com.greenstar.entity.SDTownDepot" />
+        <mapping class="com.greenstar.entity.SDTownStaff" />
+        <mapping class="com.greenstar.entity.UnapprovedSDCustomer" />
+
+        <!--
+        For HS android application
+        -->
+        <mapping class="com.greenstar.entity.qtv.AreaManager" />
+        <mapping class="com.greenstar.entity.qtv.AMCHO" />
+        <mapping class="com.greenstar.entity.qtv.CHO" />
+        <mapping class="com.greenstar.entity.qtv.Outlet" />
+        <mapping class="com.greenstar.entity.qtv.ProviderCHO" />
+        <mapping class="com.greenstar.entity.qtv.ProviderOutlet" />
+        <mapping class="com.greenstar.entity.qtv.Providers" />
+        <mapping class="com.greenstar.entity.qtv.Region" />
+        <mapping class="com.greenstar.entity.qtv.RegionProviders" />
+        <mapping class="com.greenstar.entity.qtv.IDMANAGER" />
+        <mapping class="com.greenstar.entity.qtv.QTVForm" />
+        <mapping class="com.greenstar.entity.qtv.RegionCHO" />
+        <mapping class="com.greenstar.entity.dtc.UploadImg" />
+        <mapping class="com.greenstar.entity.dtc.DTCForm" />
+        <mapping class="com.greenstar.entity.dtc.MeetingData" />
+        <mapping class="com.greenstar.entity.crb.CRBForm" />
+        <mapping class="com.greenstar.entity.crb.DropdownCRBData" />
+        <!-- DTC Application-->
+        <mapping class="com.greenstar.entity.dtc.Staff" />
+        <mapping class="com.greenstar.entity.dtc.District" />
+        <!-- QAT Form-->
+        <mapping class="com.greenstar.entity.qat.Area" />
+        <mapping class="com.greenstar.entity.qat.Question" />
+        <mapping class="com.greenstar.entity.qat.QATAreaDetail" />
+        <mapping class="com.greenstar.entity.qat.QATFormHeader" />
+        <mapping class="com.greenstar.entity.qat.QATFormQuestion" />
+        <mapping class="com.greenstar.entity.qat.QATTCForm" />
+
+        <mapping class="com.greenstar.entity.qtv.ProviderMappingMaster" />
+
+        <!--
+        Sales Model comes here
+        -->
+
+        <mapping class="com.greenstar.entity.sale.SDMonthlyFinalData" />
+        <mapping class="com.greenstar.entity.sale.MNPSaleDetailView" />
+        <mapping class="com.greenstar.entity.sale.SaleDetail" />
+        <mapping class="com.greenstar.entity.sale.SaleDetailTemp" />
+        <!--
+        Base tables
+        -->
+
+        <mapping class="com.greenstar.entity.sale.base.ProvinceMaster" />
+        <mapping class="com.greenstar.entity.sale.base.RegionMaster" />
+        <mapping class="com.greenstar.entity.sale.base.TeamDepartment" />
+        <mapping class="com.greenstar.entity.sale.base.TeamRegion" />
+        <mapping class="com.greenstar.entity.sale.base.TehsilMaster" />
+        <mapping class="com.greenstar.entity.sale.base.TehsilSNDPOP" />
+        <mapping class="com.greenstar.entity.sale.base.TerritoryEmployeeMapping" />
+        <mapping class="com.greenstar.entity.sale.base.TerritoryMaster" />
+        <mapping class="com.greenstar.entity.sale.base.Zone" />
+        <mapping class="com.greenstar.entity.sale.base.Channel" />
+        <mapping class="com.greenstar.entity.sale.base.Department" />
+        <mapping class="com.greenstar.entity.sale.base.Designation" />
+        <mapping class="com.greenstar.entity.sale.base.DistrictMaster" />
+        <mapping class="com.greenstar.entity.sale.base.DistrictProvince" />
+        <mapping class="com.greenstar.entity.sale.base.DistrictRegionMapping" />
+        <mapping class="com.greenstar.entity.sale.base.DistrictTehsil" />
+        <mapping class="com.greenstar.entity.sale.base.Employee" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeeIDPositionIDMapping" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeePositionTeam" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeeReportToMapping" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeePositionTeamRegion" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeeTagging" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeeTeamRegionMapping" />
+        <mapping class="com.greenstar.entity.sale.base.EmployeeZoneMapping" />
+        <mapping class="com.greenstar.entity.sale.base.MNPChannelMapping" />
+        <mapping class="com.greenstar.entity.sale.base.PRDGroupOn" />
+        <mapping class="com.greenstar.entity.sale.base.ProviderTehsil" />
+    </session-factory>
+</hibernate-configuration>
+

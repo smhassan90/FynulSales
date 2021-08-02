@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.Oracle10gDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            oracle.jdbc.OracleDriver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">
+            jdbc:oracle:thin:@//203.101.170.212:1521/xepdb1
+        </property>
+
+        <property name = "hibernate.connection.username">
+            umer
+        </property>
+
+        <property name = "hibernate.connection.password">
+            Umer123$
+        </property>
+
+        <mapping class="com.greenstar.entity.qat.QATAreaDetail" />
+        <mapping class="com.greenstar.entity.qat.QATFormHeader" />
+        <mapping class="com.greenstar.entity.qat.QATFormQuestion" />
+        <mapping class="com.greenstar.entity.qat.QATTCForm" />
+
+        <!--TB Classes-->
+        <mapping class="com.greenstar.entity.tb.TB01" />
+        <mapping class="com.greenstar.entity.tb.TBReport" />
+        <mapping class="com.greenstar.entity.tb.TBReportBlock2" />
+
+    </session-factory>
+</hibernate-configuration>

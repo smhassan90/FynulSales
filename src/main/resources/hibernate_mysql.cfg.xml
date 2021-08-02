@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">
+            jdbc:mysql://203.101.170.211:3306/dbfynuls
+        </property>
+
+        <property name = "hibernate.connection.username">
+            root
+        </property>
+
+        <property name = "hibernate.connection.password">
+
+        </property>
+
+        <mapping class="com.fynuls.entity.login.User" />
+        <mapping class="com.fynuls.entity.login.LoginStatus" />
+        <mapping class="com.fynuls.utils.IDMANAGER"/>
+        <mapping class="com.fynuls.entity.sale.Customer" />
+        <mapping class="com.fynuls.entity.sale.Depot" />
+        <mapping class="com.fynuls.entity.sale.DepotStaff" />
+        <mapping class="com.fynuls.entity.sale.LeaveEntry" />
+        <mapping class="com.fynuls.entity.sale.Order" />
+        <mapping class="com.fynuls.entity.sale.ProductOrder" />
+        <mapping class="com.fynuls.entity.sale.SKUGroup" />
+        <mapping class="com.fynuls.entity.sale.Status" />
+        <mapping class="com.fynuls.entity.sale.Town" />
+        <mapping class="com.fynuls.entity.sale.TownCustomer" />
+        <mapping class="com.fynuls.entity.sale.TownDepot" />
+        <mapping class="com.fynuls.entity.sale.TownStaff" />
+        <mapping class="com.fynuls.entity.sale.UnapprovedSDCustomer" />
+        <mapping class="com.fynuls.entity.sale.WorkWith" />
+
+
+    </session-factory>
+</hibernate-configuration>

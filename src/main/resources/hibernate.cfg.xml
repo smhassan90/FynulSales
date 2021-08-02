@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.Oracle10gDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            oracle.jdbc.OracleDriver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">
+           <!-- jdbc:oracle:thin:@//203.101.170.211:1521/orcl1 -->
+            jdbc:oracle:thin:@//203.101.170.211:1521/orcl1
+        </property>
+
+        <property name = "hibernate.connection.username">
+            SMPSYS
+        </property>
+
+        <property name = "hibernate.connection.password">
+            smpsysgsit2007
+        </property>
+        <!-- List of XML mapping files -->
+        <mapping class="com.fynuls.entity.sale.WorkWith" />
+        <mapping class="com.fynuls.entity.sale.LeaveEntry" />
+        <mapping class="com.fynuls.entity.sale.Order" />
+        <mapping class="com.fynuls.entity.sale.ProductOrder" />
+        <mapping class="com.fynuls.entity.sale.Customer" />
+        <mapping class="com.fynuls.entity.sale.Depot" />
+        <mapping class="com.fynuls.entity.sale.DepotStaff" />
+        <mapping class="com.fynuls.entity.sale.SKUGroup" />
+        <mapping class="com.fynuls.entity.sale.SDStaff" />
+        <mapping class="com.fynuls.entity.sale.Status" />
+        <mapping class="com.fynuls.entity.sale.Town" />
+        <mapping class="com.fynuls.entity.sale.TownCustomer" />
+        <mapping class="com.fynuls.entity.sale.TownDepot" />
+        <mapping class="com.fynuls.entity.sale.TownStaff" />
+        <mapping class="com.fynuls.entity.sale.UnapprovedSDCustomer" />
+
+    </session-factory>
+</hibernate-configuration>
+
