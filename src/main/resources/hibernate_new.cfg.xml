@@ -26,15 +26,6 @@
             Umer123$
         </property>
 
-        <mapping class="com.fynuls.entity.qat.QATAreaDetail" />
-        <mapping class="com.fynuls.entity.qat.QATFormHeader" />
-        <mapping class="com.fynuls.entity.qat.QATFormQuestion" />
-        <mapping class="com.fynuls.entity.qat.QATTCForm" />
-
-        <!--TB Classes-->
-        <mapping class="com.fynuls.entity.tb.TB01" />
-        <mapping class="com.fynuls.entity.tb.TBReport" />
-        <mapping class="com.fynuls.entity.tb.TBReportBlock2" />
 
     </session-factory>
 </hibernate-configuration>

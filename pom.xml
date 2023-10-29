@@ -117,7 +117,7 @@
 	  <artifactId>spring-oxm</artifactId>
 	  <version>${org.springframework.version}</version>
 	</dependency>
-	 
+
 	<!--
 	    Web application development utilities applicable to both Servlet and Portlet Environments
 	    (depends on spring-core, spring-beans, spring-context)
